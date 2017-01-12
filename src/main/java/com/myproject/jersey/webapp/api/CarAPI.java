@@ -11,6 +11,15 @@ import javax.ws.rs.core.Response;
 public class CarAPI {
 
     // This method is called if XMLis request
+
+    //http://localhost:8080/JerseyWebapp/webapi/car
+    // Header : Content-Type application/json
+    //   {
+    //        "VIN": "1234",
+    //            "color": "Blue",
+    //            "miles": 100
+    //    }
+
     @GET
     @Produces( { MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
     public Car getXML() {
@@ -30,6 +39,14 @@ public class CarAPI {
         return Response.ok().build();
     }
 
+
+    //http://localhost:8080/JerseyWebapp/webapi/car/post
+    // Header : Content-Type application/json
+    //  {
+    //        "VIN": "1234",
+    //        "color": "Blue",
+    //        "miles": 200
+    //  }
     @POST
     @Path("/post")
     @Consumes(MediaType.APPLICATION_JSON)

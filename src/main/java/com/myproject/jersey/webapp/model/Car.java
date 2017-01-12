@@ -1,13 +1,27 @@
 package com.myproject.jersey.webapp.model;
 
+
+import javax.ws.rs.Produces;
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Produces("application/json")
 @XmlRootElement
 public class Car {
 
 	private String VIN;
 	private String color;
 	private Integer miles;
+
+	public Car()
+	{
+	}
+
+	public Car(String VIN, String color, Integer miles)
+	{
+		this.VIN = VIN;
+		this.color = color;
+		this.miles = miles;
+	}
 	
 	public String getVIN() {
 		return VIN;

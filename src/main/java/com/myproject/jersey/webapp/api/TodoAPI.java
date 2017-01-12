@@ -19,26 +19,26 @@ public class TodoAPI {
         this.request = request;
         this.id = id;
     }
-
-    // This method is called if XMLis request
-    @GET
-    @Produces( { MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-    public Todo getXML() {
-        Todo todo = new Todo();
-        todo.setSummary("This is my first todo");
-        todo.setDescription("This is my first todo");
-        return todo;
-    }
-
-    // This can be used to test the integration with the browser
-    @GET
-    @Produces( { MediaType.TEXT_XML })
-    public Todo getHTML() {
-        Todo todo = new Todo();
-        todo.setSummary("This is my first todo");
-        todo.setDescription("This is my first todo");
-        return todo;
-    }
+//
+//    // This method is called if XMLis request
+//    @GET
+//    @Produces( { MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
+//    public Todo getXML() {
+//        Todo todo = new Todo();
+//        todo.setSummary("This is my first todo");
+//        todo.setDescription("This is my first todo");
+//        return todo;
+//    }
+//
+//    // This can be used to test the integration with the browser
+//    @GET
+//    @Produces( { MediaType.TEXT_XML })
+//    public Todo getHTML() {
+//        Todo todo = new Todo();
+//        todo.setSummary("This is my first todo");
+//        todo.setDescription("This is my first todo");
+//        return todo;
+//    }
 
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})

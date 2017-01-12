@@ -1,7 +1,9 @@
 package com.myproject.jersey.webapp.model;
 
+import javax.ws.rs.Produces;
 import javax.xml.bind.annotation.XmlRootElement;
 
+@Produces("application/json")
 @XmlRootElement
 public class Todo {
     private String id;
